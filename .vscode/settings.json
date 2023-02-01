@@ -1,6 +1,8 @@
 {
+  "eslint.run": "onSave",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "files.autoSave": "onWindowChange",
   "eslint.validate": ["javascript"]
  }
