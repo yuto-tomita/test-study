@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
+    'plugin:vue/vue3-strongly-recommended',
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:import/warnings',
@@ -51,10 +52,33 @@ module.exports = {
     'no-whitespace-before-property': 'error',
     quotes: ['error', 'single'],
     'rest-spread-spacing': ['error', 'never'],
-
+    'padding-line-between-statements': [
+      'error',
+      {
+        'blankLine': 'always',
+        'prev': '*',
+        'next': 'return'
+      },
+      {
+        'blankLine': 'always',
+        'prev': '*',
+        'next': 'function'
+      },
+      {
+        'blankLine': 'always',
+        'prev': '*',
+        'next': 'if'
+      },
+      {
+        'blankLine': 'always',
+        'prev': '*',
+        'next': 'block'
+      },
+    ],
     /** eslint-plugin-typescript options */
 
     /** vue3-eslint options */
+    'vue/multi-word-component-names': 'off',
     'vue/block-lang': [
       'error',
       {
@@ -63,10 +87,6 @@ module.exports = {
         },
       },
     ],
-    // 'vue/html-closing-bracket-newline': ['error', {
-    //   'singleline': 'never',
-    //   'multiline': 'always'
-    // }],
     'vue/html-closing-bracket-spacing': [
       'error',
       {
@@ -75,22 +95,6 @@ module.exports = {
         selfClosingTag: 'always',
       },
     ],
-    // 'vue/html-indent': ['error', 2, {
-    //   'attribute': 1,
-    //   'baseIndent': 1,
-    //   'closeBracket': 0,
-    //   'alignAttributesVertically': true,
-    //   'ignores': []
-    // }],
-    // 'vue/html-self-closing': ['error', {
-    //   'html': {
-    //     'void': 'never',
-    //     'normal': 'always',
-    //     'component': 'always'
-    //   },
-    //   'svg': 'always',
-    //   'math': 'always'
-    // }],
     'vue/first-attribute-linebreak': [
       'error',
       {
@@ -109,11 +113,6 @@ module.exports = {
         },
       },
     ],
-    // 'vue/multiline-html-element-content-newline': ['error', {
-    //   'ignoreWhenEmpty': true,
-    //   'ignores': ['pre', 'textarea'],
-    //   'allowEmptyLines': true
-    // }],
     'vue/mustache-interpolation-spacing': [
       'error',
       'always',
