@@ -9,7 +9,8 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "fix": "eslint --cache --fix --ext .ts,.vue . && prettier --write" 
   },
   "lint-staged": {
     "src/**/*.{vue,ts,js}": [
