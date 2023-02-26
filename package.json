@@ -10,7 +10,7 @@
     "coverage": "vitest run --coverage",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "fix": "eslint --cache --fix --ext .ts,.vue . && prettier --write" 
+    "fix": "eslint --cache --fix --ext .ts,.vue . && prettier --write"
   },
   "lint-staged": {
     "src/**/*.{vue,ts,js}": [
@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "@tanstack/vue-query": "^4.24.10",
     "pinia": "^2.0.30",
     "vue": "^3.2.47",
     "vue-router": "4.1.6"
