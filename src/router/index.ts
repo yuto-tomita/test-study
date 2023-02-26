@@ -7,7 +7,7 @@ export const router = createRouter({
   routes: [
     {
       path: '/',
-      components: Top,
+      component: Top,
     },
   ],
 })
