@@ -10,15 +10,15 @@ export default defineConfig({
     alias: [
       {
         find: '@/',
-        replacement: `${__dirname}/src/`
-      }
-    ]
+        replacement: `${__dirname}/src/`,
+      },
+    ],
   },
   server: {
-    host: true
+    host: true,
   },
   test: {
     globals: true,
     environment: 'jsdom',
-  }
+  },
 })
